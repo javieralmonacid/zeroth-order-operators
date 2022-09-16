@@ -1,6 +1,26 @@
-% Eigenvalues and eigenfunctions
+% Figure 10. Evolution of the first eigenvalue (left) and second to 
+% seventh eigenvalues (right) for Test 2 ($r=0.45$, 
+% $\beta(x) = \cos(x_1-2x_2)+\sin(2x_2)$) when the viscosity 
+% decreases from $10^{-2}$ to $3 \cdot 10^{-4}$.
+%
+% Figure 12. Radial energy density $E_0$ (log-log scale) of different 
+% viscous eigenfunctions $\phi_j$. Each curve represents a fixed value of 
+% $\nu$ within the chosen range. In general, as the viscosity decreases, 
+% the curves move to the right, which shows that the viscous 
+% eigenfunctions become less regular.
+%
+% Figure 13. Magnitude of eigenmodes in real space $\phi_j$ for Tests 1, 
+% 2 and 3. The shape of some of the eigenmodes resembles that of the 
+% attractors in Figure 7.
+%
+% Figure 15. Left half: Magnitude of some eigenmodes in frequency space 
+% $\widehat{\phi_j}$ of $\ip{D}^{-1} D_{x_2} + i\nu\Delta - 
+% 0.45\left(\cos(x_1-2x_2) + \sin(2x_2)\right)$ ($\nu = 3 \cdot 10^{-4}$). 
+% Right half: Long-term evolution in frequency space (this is the Fourier 
+% transform of Figure 7-center).
 
 close all; clear; clc; 
+addpath tools;
 
 auxst = dbstack; filename = auxst.name;
 filename = [filename,'.mat'];

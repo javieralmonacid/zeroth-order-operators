@@ -1,6 +1,8 @@
-% Growth of squared L2norm 
+% Figure 4. Evolution of the squared $\rm L^2$-norm for several values of 
+% $r$ and $\beta(x) = \cos(x_1)+\sin(x_2)$.
 
-close all; clear; clc; 
+close all; clear; clc;
+addpath tools;
 
 auxst = dbstack; filename = auxst.name;
 filename = [filename,'.mat'];
@@ -31,8 +33,9 @@ else
     disp(['File exists. Loading ',filename])
     load(filename)
 end
+
 %% Plot
-figure(1)
+figure(4)
 plot(t,norms(1,:),'-.o','LineWidth',1.5)
 hold on
 plot(t,norms(2,:),'-.s','LineWidth',1.5)

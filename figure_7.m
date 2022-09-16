@@ -1,6 +1,9 @@
-% Long-term evolution. Plots in real and Fourier space
+% Figure 7. Long-term evolution for Tests 1, 2 3 (left to right). 
+% Evolution computed using $\omega_0 = 0$ and a centred Gaussian as
+% a source term.
 
-close all; clear; clc; 
+close all; clear; clc;
+addpath tools;
 
 auxst = dbstack; filename = auxst.name;
 filename = [filename,'.mat'];
@@ -69,7 +72,7 @@ xlabel('x_1'); ylabel('x_2'); view([0 90])
 colorbar; axis tight;
 title('$|u_3|$ ($t=1000$)', 'Interpreter', 'latex', 'FontSize', 12)
 
-%% Plot in Fourier space
+%% Plot in Fourier space -> Moved to Figures 14, 15, and 16
 %{
 figure(17)
 set(gcf, 'Position', [665 549 1201 270])

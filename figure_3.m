@@ -11,7 +11,8 @@
 % 3.70GHz, 16GB of RAM):
 % Time: ~4 minutes
 % Memory: ~6 GB 
-close all; clear; clc; 
+close all; clear; clc;
+addpath tools;
 
 %% Convergence study of the eigensolver for nu = 0.01
 
@@ -65,7 +66,7 @@ else
 end
 
 %% Plot the error for nu = 0.01
-figure(1)
+figure(31)
 loglog(N,errorl,'-s','LineWidth',1.2,'Color',[0.6350 0.0780 0.1840])
 grid on
 set(gca,'FontSize',12)
@@ -123,7 +124,7 @@ else
 end
 
 %% Plot the error for nu = 0.001
-figure(2)
+figure(32)
 loglog(N,errorl,'-s','LineWidth',1.2,'Color',[0.6350 0.0780 0.1840])
 grid on
 set(gca,'FontSize',12)

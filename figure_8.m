@@ -1,6 +1,9 @@
-% Plot energy manifolds
+% Figure 8. Energy manifolds $\Sigma_j$, $j \in \{1,2,3\}$ viewed from 
+% the side (top row), and from the top (bottom row). This last view 
+% reveals holes in $\Sigma_3$, but not in $\Sigma_1$ and $\Sigma_2$.
 
 clear; close all;
+addpath tools;
 
 N = 128;
 x = 2*pi*(-N/2:N/2)/N;

@@ -1,6 +1,12 @@
-% Decay in RED
+% Figure 5. Radial energy density $E_0$ at several times ($r = 0.25$, 
+% $\beta(x) = \cos(x_1)+\sin(x_2)$).
+%
+% Figure 6. Radial energy density for different values of $s$. This 
+% suggests that $E_s(u_N)(R)$ decays faster than $R^{2s}$ for any 
+% $s \leq 0$.
 
-close all; clear; clc; 
+close all; clear; clc;
+addpath tools;
 
 auxst = dbstack; filename = auxst.name;
 filename = [filename,'.mat'];
@@ -25,8 +31,9 @@ end
 
 [R,G] = red(0,UF,KX,KY);
 
-%% PLOT 0
-figure(1)
+%% RED E0 (Figure 5)
+
+figure(5)
 semilogy(R,G,'LineWidth',1.2,'Color',[0.6350 0.0780 0.1840])
 axis([R(1) N/2 1e-25 1e+10])
 text(75,1e-10,'t = 200','BackgroundColor','white')
@@ -48,9 +55,9 @@ ylabel('RED {E_0}','FontSize',12)
 
 %saveas(gcf,'/home/javier/Dropbox/sfu/research/nigam-zworski-01/tex/paper/figs/fig27_red0','epsc')
 
-%% 3-plot (-1/2, -1, -3/2)
+%% RED E_s, s \in \{-1/2, -1, -3/2\} (Figure 6)
 
-figure(2), clf
+figure(6), clf
 set(gcf,'Position',[779 498 1066 302])
 
 subplot(1,3,1)

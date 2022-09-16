@@ -1,7 +1,27 @@
-% Eigenvalues and eigenfunctions
-% r = 0.5, beta(x) = cos(x_1)
+% Figure 9. Evolution of the first 8 eigenvalues in Test 1 ($r=0.5$, 
+% $\beta(x) = \cos(x_1)$) as $\nu$ decreases from $9.3 \cdot 10^{-3}$ 
+% to $2.3 \cdot 10^{-3}$. While some of them move in an oblique direction 
+% away from 0 (top), a closer look near the points $\pm 0.15 - 0.2i$ 
+% (bottom) shows that the first and fifth eigenvalues are moving slowly 
+% upwards.
+%
+% Figure 12. Radial energy density $E_0$ (log-log scale) of different 
+% viscous eigenfunctions $\phi_j$. Each curve represents a fixed value of 
+% $\nu$ within the chosen range. In general, as the viscosity decreases, 
+% the curves move to the right, which shows that the viscous 
+% eigenfunctions become less regular.
+%
+% Figure 13. Magnitude of eigenmodes in real space $\phi_j$ for Tests 1, 
+% 2 and 3. The shape of some of the eigenmodes resembles that of the 
+% attractors in Figure 7.
+%
+% Figure 14. Left half: Magnitude of some eigenmodes in frequency space 
+% $\widehat{\phi_j}$ of $\ip{D}^{-1} D_{x_2} + i\nu\Delta - 0.5\cos(x_1)$ 
+% ($\nu = 2.3 \cdot 10^{-3}$). Right half: Long-term evolution in 
+% frequency space (this is the Fourier transform of Figure 7-left).
 
 close all; clear; clc; 
+addpath tools;
 
 auxst = dbstack; filename = auxst.name;
 filename = [filename,'.mat'];
@@ -170,6 +190,7 @@ for k = 1:length(ef)
     view([0 90])
 end
 
+% Load the dataset from Figure 7
 load('figure_7.mat')
 p(5) = subplot(2,4,[3 4 7 8]);
 surf(KX1,KY1,abs(UF1(:,:,2))),

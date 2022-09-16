@@ -10,6 +10,7 @@
 % dt = 0.5 and a 256x256 mesh. We show the results at times t = 50, 100,
 % 150, 200, 250, and 300.
 close all; clear; clc;
+addpath tools;
 
 %% Compute solution and save it to disk.
 % We save the data in a .mat file with the same name as this script.

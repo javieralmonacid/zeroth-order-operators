@@ -9,8 +9,9 @@
 % Expected computational usage (as measured using a 6-core Intel Core i5-9600K 
 % 3.70GHz, 16GB of RAM):
 % - Time convergence study: ~20 min, ~3 GB of RAM
-% - Space convergence study: 
+% - Space convergence study: ~2 min, ~7 GB of RAM
 close all; clear; clc;
+addpath tools;
 
 %% Convergence in time for the ETDRK4 and RK4 methods
 % We consider a forcing frequency omega_0 = 0.1 and a 64-by-64 spatial
@@ -104,8 +105,8 @@ disp('Rate of convergence using ETDRK4'), disp(rate2)
 error1 = error1/(norm(Uex(:,:,end),'fro')*2*pi/N^2); 
 error2 = error2/(norm(Uex(:,:,end),'fro')*2*pi/N^2); 
 
-figure(1)
-loglog(dt,error1,'-d',dt,error2,'-s',dt,1e-2*dt.^4,'k-.','LineWidth',1.5)
+figure(21)
+loglog(dt,error1,'-d',dt,error2,'-s',dt,1e-2*dt.^4,'k-.','LineWidth',2)
 axis([dt(end) dt(1) 1e-12 1]), grid on
 xlabel('{\Delta}t','FontSize',12)
 ylabel('L^2-Relative Error in {[-\pi,\pi]^2}','FontSize',12)
@@ -137,7 +138,7 @@ filename = [filename,'_space.mat'];
 if ~isfile(filename)
     % Set the parameters and forcing functions. We will use an ETDRK4 time
     % discretization.
-    solver = 'etdrk4fft2'; dt = 1e-02;
+    solver = 'etdrk4fft2'; dt = 1e-01;
     omega0 = 0.5; T = 10; r = 2; Nex = 2^10;
     nvalues = 2.^(3:7);
     funcs = {@(x,y) sin(x).*cos(2*y), ...
@@ -210,11 +211,12 @@ else
     %load('/home/javier/Dropbox/sfu/MSc Thesis/nigam-zworski-01/internal-waves/old_mat_spaceconvergence.mat');
 end
 
-figure(2)
-loglog(nvalues,error2(1,:),'-*',nvalues,error2(2,:),'-s',nvalues,error2(3,:),'-d',nvalues,error2(4,:),'-o','LineWidth',1.5)
+figure(22)
+loglog(nvalues,error2(1,:),'-*',nvalues,error2(2,:),'-s',nvalues,error2(3,:),'-d',nvalues,error2(4,:),'-o','LineWidth',2)
 grid on
 xlabel('N','FontSize',12); 
 ylabel('L^2-Relative Error in {[-\pi/4,\pi/4]^2}','FontSize',12)
 legend('f_1','f_2','f_3','f_4','location','SouthWest','FontSize',12)
 set(gca,'FontSize',12)
 set(gcf,'Position',[669   530   520   391])
+xticks(nvalues)
