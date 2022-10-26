@@ -17,3 +17,9 @@ Just cite the main article (preprint for now):
 > J. A. Almonacid and N. Nigam. *Characterization of singular flows of zeroth-order pseudo-differential operators via elliptic eigenfunctions: a numerical study.* arXiv e-prints, arXiv:2210.13622 (2022). Submitted
 
 This reference will be updated once the article has been published.
+
+## External tools used
+
+- ColorBrewer: Attractive and Distinctive Colormaps ([GitHub](https://github.com/DrosteEffect/BrewerMap), [Mathworks File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/45208-colorbrewer-attractive-and-distinctive-colormaps)),
+- ```sptoeplitz``` [(Mathworks File Exchange)](https://www.mathworks.com/matlabcentral/fileexchange/13353-sparse-toeplitz-matrix-construction),
+- ```textprogressbar``` [(Mathworks File Exchange)](https://www.mathworks.com/matlabcentral/fileexchange/28067-text-progress-bar).
