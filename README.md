@@ -14,9 +14,10 @@ The propagation of internal gravity waves in stratified media, such as those fou
 
 Just cite the main article:
 
-> J. A. Almonacid and N. Nigam. *Characterization of singular flows of zeroth-order pseudo-differential operators via elliptic eigenfunctions: a numerical study.* Journal of Computational and Applied Mathematics (2023), doi: [https://doi.org/10.1016/j.cam.2023.115510](https://doi.org/10.1016/j.cam.2023.115510).
+> J. A. Almonacid and N. Nigam. *Characterization of singular flows of zeroth-order pseudo-differential operators via elliptic eigenfunctions: a numerical study.* Journal of Computational and Applied Mathematics 438 (2024), 115510.
 
-This reference will be updated once the article has been published in its final form.
+Available on the [JCAM website](https://www.sciencedirect.com/science/article/pii/S0377042723004545) and [arXiv](https://arxiv.org/abs/2210.13622).
+
 
 ## External tools used
 
